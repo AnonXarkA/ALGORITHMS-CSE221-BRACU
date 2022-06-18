@@ -256,8 +256,7 @@ Output 2:
 Task 5 (5 marks)
 Study the algorithm below and implement the quickSort method . Additionally you will also need to implement the “partition” method. After sorting, print both the unsorted array and sorted array and also the time it takes to complete sorting.
 
-https://prnt.sc/cTkRiHjurDnh
-
+![image](http://0x0.st/ou4b.png)
 
 b. Implement an algorithm “findK” that uses the “partition” algorithm to find the kth 
 (smallest) element from an array without sorting. E.g. for the array in our example, the 5th element will be “9” 
@@ -279,7 +278,7 @@ Ans: ⚡  <a href="https://github.com/AnonXarkA/ALGORITHMS-CSE221-BRACU/tree/mai
 # LAB 3 - BFS Lab (graph, array list, matrix coding) 📝
 
 <br>
-https://prnt.sc/ei1VOSb_0LXw
+![image](http://0x0.st/ou4c.png) 
 
 Suppose one fine morning, you woke up in the world of Pokémon. Now you decided to become a Pokémon master just like your childhood idol Ash Ketchum. 
 In order to do so, you have to defeat the gyms/bad guys in the places you walk into in a limited amount of time. Your goal is to get to the Victory Road as quickly as possible. 
@@ -516,7 +515,7 @@ Suppose, each road is represented by i and each ith road connects 2 places ui an
 
 For example, in the following graph (vertices represent places and edges represent roads), Eren has to face a minimum 5 titans by using the path 1 → 4 → 3 → 5.
 
-https://prnt.sc/HFlzm760BsiC
+![image](http://0x0.st/ou4A.png)
 
 Input Format:
 
@@ -630,7 +629,7 @@ There are 2 mother nodes Motijheel, which is the source, and Moghbazar the desti
 BFS also gives the shortest path between source and destination. Why not use BFS in this situation?
 
 
-https://prnt.sc/dW4HarrcgFbJ
+![image](http://0x0.st/ou4m.png)
 
 
 
@@ -641,8 +640,8 @@ In a computer network, there are N devices and M links. A link is a one way conn
 
 The data transfer rate of a connection from one device to another is the minimum data transfer rate of the links in that connection. [You can think of connection as a directed path. So, a connection from device u to device v is a sequence of links that joins a sequence of distinct devices where the links are directed from u to v.]
 
-!(https://prnt.sc/Mp5aJI3l1Nh5)
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
+![This is an image](http://0x0.st/ou4a.png)
 
 
 
