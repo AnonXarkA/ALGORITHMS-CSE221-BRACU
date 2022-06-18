@@ -278,7 +278,8 @@ Ans: ⚡  <a href="https://github.com/AnonXarkA/ALGORITHMS-CSE221-BRACU/tree/mai
 # LAB 3 - BFS Lab (graph, array list, matrix coding) 📝
 
 <br>
-![image](http://0x0.st/ou4c.png) 
+
+![image](https://0x0.st/ou4c.png)
 
 Suppose one fine morning, you woke up in the world of Pokémon. Now you decided to become a Pokémon master just like your childhood idol Ash Ketchum. 
 In order to do so, you have to defeat the gyms/bad guys in the places you walk into in a limited amount of time. Your goal is to get to the Victory Road as quickly as possible. 
