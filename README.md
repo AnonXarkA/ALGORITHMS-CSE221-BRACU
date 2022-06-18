@@ -642,6 +642,9 @@ In a computer network, there are N devices and M links. A link is a one way conn
 The data transfer rate of a connection from one device to another is the minimum data transfer rate of the links in that connection. [You can think of connection as a directed path. So, a connection from device u to device v is a sequence of links that joins a sequence of distinct devices where the links are directed from u to v.]
 
 !(https://prnt.sc/Mp5aJI3l1Nh5)
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
+
 
 For example, in the network above, there can be three possible connections from 1 to 4:
 
