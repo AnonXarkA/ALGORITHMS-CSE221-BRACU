@@ -108,4 +108,4 @@ plt.title('Comparing Time Complexity!')
 plt.show() 
 
 
-Ans: ⚡ 
+Ans: ⚡  <a href="https://github.com/AnonXarkA/ALGORITHMS-CSE221-BRACU/tree/main/Lab%201"> LAB 1</a> <br> 
