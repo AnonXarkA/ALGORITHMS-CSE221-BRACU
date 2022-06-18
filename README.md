@@ -256,17 +256,7 @@ Output 2:
 Task 5 (5 marks)
 Study the algorithm below and implement the quickSort method . Additionally you will also need to implement the “partition” method. After sorting, print both the unsorted array and sorted array and also the time it takes to complete sorting.
 
-
-
-
-
-
-< img src="https://prnt.sc/cTkRiHjurDnh" alt="l" >
-
-
-
-
-
+https://prnt.sc/cTkRiHjurDnh
 
 
 b. Implement an algorithm “findK” that uses the “partition” algorithm to find the kth 
@@ -282,3 +272,6 @@ Output:
 10
 3
 
+<br>
+
+Ans: ⚡  <a href="https://github.com/AnonXarkA/ALGORITHMS-CSE221-BRACU/tree/main/Lab%202"> LAB 2</a> <br> 
