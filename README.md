@@ -741,3 +741,342 @@ return dist,prev
 Note: The libraries for priority queue may only implement min-heap data structure. But for this problem, we need a max-heap.
 
 Ans: ⚡  <a href="https://github.com/AnonXarkA/ALGORITHMS-CSE221-BRACU/tree/main/Lab%204"> LAB 4</a> <br> 
+
+# LAB 5 - Greedy 📝
+
+Task 1 [10 marks]:
+Suppose, you have N number of assignments with their time intervals- i.e. starting and ending times. As you are a student, you need to find out how you can finish the maximum number of assignments. Now, Implement a greedy algorithm to find the maximum number of assignments that can be completed by you.The following conditions must be met when writing the code: A student can only work on a single assignment at a time.
+The input will contain N assignments, and then N lines with the starting time and ending time in the format given below:
+N
+S₁ E₁
+S₂ E₂
+…….
+Sn En
+
+You have to read input from a file. The output will contain the maximum number of assignments that can be completed followed by  the intervals of the selected assignment. Sample input and output is given below.  Name your input file “task1_input.txt”. Make sure to try out different input examples to ensure that your code is working for different cases. Include the input file in your zipped submission folder.
+
+![image](http://0x0.st/ou4u.png)
+
+
+A  greedy algorithm for the above problem is discussed below. Before you look at the algorithm it is recommended that you spend some time and try to think of a solution yourself.
+
+//arr[ ][ ] is a 2D array-each index contains the start and finish time of each assignment
+Assignment_Selection (arr[ ][ ], n) 
+Add the 1st assignment from the sorted array in a queue/list “selected”
+initialize a variable count = 1. 
+Current finish time f = arr[0][1] //(finish time of first assignment)
+For each remaining assignment in index c:
+If the starting time of this assignment is greater or equal to the ending time of previously selected assignment, f
+then count++
+f=arr[c][1]
+Add the start and finish time of assignment in index c to “selected”
+Print count.
+Print the queue/list selected 
+
+Task 2 [5 marks]:
+
+ . Each activity has a time interval- i.e. a start and a finish time. The activities can be distributed between M people. Implement a greedy algorithm to find the total number of activities that can be completed by M people. The following conditions must be met when writing the code:
+One person cannot do activities with overlapping time intervals, so each person can do only one activity at a given time interval. 
+Each activity can be completed by only one person.
+
+For task 2 the pseudocode is provided below. You have to modify the pseudocode to complete Task 2. 
+
+![image](http://0x0.st/ou4S.png)
+
+The input will contain N and M, and then N lines with the start time and finish time in the format given below:
+
+N M
+S₁ F₁
+S₂ F₂
+…….
+Sn Fn
+
+You have to read input from a file. The output will contain the total number of activities that can be completed. Sample input and output is given below.  Name your input file “task2_input.txt”. Make sure to try out different input examples to ensure that your code is working for different cases. Include the input file in your zipped submission folder.
+
+![image](http://0x0.st/ou4Q.png)
+
+Task 3 [5 marks]:
+
+Jack and Jill’s parents decide to make their children do some house chores. So they list a set of activities that can be completed in a whole day. In order to complete each activity a certain amount of time (in hours) is required. The parents randomly call each of their children several times separately to choose from the given activities. In each call the children choose an activity based on the following conditions:
+In each call, each of them chooses one activity
+Jack has to choose an activity that has not been selected yet.
+Jill, being very little, should choose an activity that Jack has already chosen so that she can help her older brother because she cannot do such tasks by herself.
+Jack does not like doing chores, so he decides he would choose the activity that requires the shortest amount of time to complete among the remaining activities. 
+Jill really adores her brother and wants to help him out the most she can, so in each call she decides to choose the activity that needs the maximum time to complete out of the activities chosen by Jack so far.
+
+Implement a greedy algorithm that will meet all above conditions. The input will be N- the number of tasks, followed by a sequence of N numbers denoting the time it takes to complete each task and then a call string which is a string of characters only containing J or j representing who is called next Jack (J) or Jill (j). The input format will be:
+
+N
+T₁ T₂…… Tn
+JJjJjjJ
+
+Assume that both the children will be called and Jack will be called either the same or greater number of times than Jill. You should output the sequence of tasks chosen and the total hours each of the children will be working. Sample input output is given below. You should read from a file. Name the file “task3_input.txt” and include it in the submission folder. Sample input output is given below:
+
+![image](http://0x0.st/ou4j.png)
+
+A possible greedy algorithm for the above problem is discussed below. Before you look at the algorithm it is recommended that you spend some time and try to think of a solution yourself.
+
+Sort the activities in ascending order of time in an array
+Create a stack or priority queue for Jack’s current chosen task. 
+Initialize index to 0.
+Create variables for sequence, Jack’s hours and Jill’s hours
+For each character c in the call string
+If (c==”J”)
+Push value of the index of sorted array in the stack/priority queue
+Append the value in the sequence
+Increment index
+Add the value to Jack’s hours
+else if  (c==”j”)
+Pop the top of the stack or highest value from priority queue
+Append the popped value in the sequence
+Add the popped value to Jill’s hours
+Print sequence, Jack’s hours and Jill’s hours
+
+
+
+Task 4: (5 marks)
+A square number is an integer number whose square root is also an integer. For example 1, 4, 81 are some square numbers. Given two numbers a and b you will have to find out how many square numbers are there between a and b (inclusive).
+ 
+Input 
+Each line contains two integers a and b (0 < a ≤ b ≤ 100000). Input is terminated by a line containing two zeroes. This line should not be processed. 
+
+Output
+For each line of input produclllle one line of output. This line contains an integer which denotes how many square numbers are there between a and b (inclusive). 
+
+Sample Input 
+1 4
+1 10
+0 0 
+
+Sample Output 
+2 
+3
+
+Ans: ⚡  <a href="https://github.com/AnonXarkA/ALGORITHMS-CSE221-BRACU/tree/main/Lab%205"> LAB 5</a> <br> 
+
+# LAB 6 - LCS code 📝
+
+Problem 1 [5 marks]
+We would like to find the minimum number of steps required to get 0 from any number, when you can only subtract a digit present in that number in a single step.
+For example, if you are given 25. Then you can either subtract 2 or 5 from 25. Let's subtract 5 then we will get 20. Then we can subtract 2 and get 18 and so on. The minimum number of steps to get from 25 to 0 is shown below:
+25→20→18→10→9→0.
+Now you need to write a DP program to find the minimum number of steps to solve the problem for any input. Input range will be from 0 to 999.
+Pseudo-code is not given because it is quite a basic dp problem!
+
+
+
+
+Problem 2 (LCS) [10 Marks]:
+
+
+PUBGM (Player Unknown’s BattleGrounds Mobile) is one of the most popular online battle royale games. PMPL (PUBGM Pro League) is the biggest tournament of south asia and Future Station a team from Bangladesh has qualified for the final round of the tournament. MagneT also known as “The zone magnet” for his accuracy of in-game zone predictions is the IGL (Team leader) of the team and he predicted the zone sequence before a match in the finals. For the match of map Erangel his prediction was,
+
+![image](http://0x0.st/ou42.png)
+
+On that match the team had a very good result and actual zone sequence of that match was:
+
+![image](http://0x0.st/ou4_.png)
+
+Now, you have to find out the longest common zone sequence from MagneT’s prediction and actual match by using LCS (Longest Common Subsequence) algorithm. Then verify the correctness of MagneT’s prediction. For correctness you will use the formula given below.
+Correctness = (Length of longest common zone sequence × 100) ÷ Number of zones 
+Note: Zone meta given here is completely fictional. Please do not match it with the real game zone meta.
+
+Hint: You have to store zone center values according to keywords first. You can use the following pseudo code of LCS algorithm.
+
+LCS(X, Y):
+m <- length of X + 1
+n <- length of Y + 1
+for i <- 1 to m:
+c[i,0] <- 0
+t[i,0] <- null/None
+for j <- 1 to n:
+	c[0,j] <- 0
+	t[0,j] <- null/None
+	for i <- 1 to m:
+		for j <-1 to n:
+			if X[i] = Y[j]:
+				c[i,j] <- c[i-1,j-1]+1
+				t[i,j] <- diagonal
+			else if c[i-1,j] >= c[i,j-1]:
+				c[i,j] <- c[i-1,j]
+				t[i,j] <- up
+			else: 
+				c[i,j] <- c[i,j-1]
+				t[i,j] <- left
+
+Sample Input:
+8	//Number of zones           
+YRSPFMHI	//Zone sequence of the match
+YPSRFMHI	//Zone sequence of MagneT’s prediction
+
+Sample Output:
+Yasnaya Pochinki Farm Mylta Shelter Prison
+Correctness of prediction: 75%
+
+
+
+Problem 3 (LCS for 3 string) [10 Marks]:
+
+You know about how to find the Longest Common Subsequence (LCS) between two strings using dynamic programming. Let’s make it a bit challenging. I will give you three strings instead of two, and now you need to find out the Longest Common Subsequence (LCS) among these three strings. Sounds interesting, right? I know you can do it!
+
+Input:
+Each input will consist of three strings in each line. The length of each string will be no greater than 100. 
+
+Output:
+Output the length of the longest common subsequence of the given three strings.
+
+Sample Input 1:
+hell
+hello
+bella
+
+Sample Output 1:
+3
+
+Sample Input 2:
+abbcdab
+daccbadb
+abccdaab
+
+Sample Output 2:
+4
+
+Hint: For this problem you have to construct LCS for 3 parameters. You can use the following pseudo code to find out the longest common subsequence of three strings.
+
+
+The followings are for your understanding:
+
+ 
+LCS(X, Y, Z):
+    m <- length[X] + 1
+    n <- length[Y] + 1
+    o <- length[Z] + 1
+    c[m][n][o]
+    t[m][n][o]
+    for i <- 1 to m:
+    	for j <- 1 to n:
+		for k <-1 to o:
+			if i = 0 Or j = 0 Or k = 0:
+				c[i][j][k] <- 0
+				t[i][j][k] <- null/None
+			else:
+				if x[i] = y[j] And x[i] = z[k]:
+					c[i][j][k] <- 1 + c[i-1][j-1][k-1]
+                            			t[i][j][k] <- diagonal
+				else:
+					if c[i-1][j][k] >= c[i][j-1][k]:
+						max <- c[i-1][j][k]
+						if max >= c[i][j][k-1]:
+							c[i][j][k] <- max
+                                    				t[i][j][k] <- up-up-left
+						
+						else:
+							max <- c[i][j][k-1]
+                                    				c[i][j][k] <- max
+                                    				t[i][j][k] <- left-up-up
+					else:
+						max <- c[i][j-1][k]
+						if max >= c[i][j][k-1]:
+							c[i][j][k] <- max
+                                    				t[i][j][k] <- up-left-up
+						else:
+							max <- c[i][j][k-1]
+                                    				c[i][j][k] <- max
+                                    				t[i][j][k] <- left-up-up
+
+
+
+
+3D Array:
+We already know how to operate 2D arrays. Now we have to use 3D arrays in order to construct LCS with 3 parameters. Multidimensional array means multiple arrays of different dimensions or sizes can be held by a single array. We will learn about 3D arrays with an example.
+Suppose we want to store midterm and final marks separately of four different courses of three students in a single array. We can easily do it by using a 3D array.
+
+![image](http://0x0.st/ou4L.png)
+
+This is the pictorial view of the given scenario.Normally we can denote an array of 3 dimensions by this notation A[ ][ ][ ]. If we initialize this array empirically it will be like,
+A[3][4][2]
+Here, A is a 3D array where it has a size of 3 which represents 3 students. Each of 3 indices can hold an array of size 4 which indicates the different courses. And indices of these arrays can hold arrays of size 2 where each index represents the marks of mid and final.
+For extracting the specific values from array A, we can simply use these instructions,
+
+print(A[0][1][0])
+print (A[2][2][1])
+print(A[1][3][0])
+First command will give 35 as output because first it will access the 0 th index of A. Then it will go through the index number 1 of it’s connected array and finally index number 0 of the array which is connected with the index number 1 of 2nd array will be accessed and give its value as output which is 35. Same procedure will be applied for the rest of the instructions. The second and third commands will give outputs 17 and 46 respectively. For traversing this array you can use the given codes.
+
+Python:
+for i in range(len(A)):
+    print("Student: ",(i+1))
+    for j in range(len(A[i])):
+        print("Course: ",(j+1))
+        print("Marks of Mid and Final: ")
+        for k in range(len(A[i][j])):
+            print(A[i][j][k],end=" ")
+        print()
+    print()
+
+Java:
+for (int i = 0; i < A.length; i++) {
+	System.out.println("Student: "+(i+1));
+	for (int j = 0; j < A[i].length; j++) {
+		System.out.println("Course: "+(j+1));
+		System.out.println("Marks of Mid and Final: ");
+		for (int k = 0; k < A[i][j].length; k++) {
+			System.out.print(A[i][j][k]+" ");
+		}
+		System.out.println();
+	}
+	System.out.println();
+}
+
+
+
+
+Output: 
+Student:  1
+Course:  1
+Marks of Mid and Final: 
+30 25
+Course:  2
+Marks of Mid and Final:
+35 40
+Course:  3
+Marks of Mid and Final:
+41 45
+Course:  4
+Marks of Mid and Final:
+26 26
+
+Student:  2
+Course:  1
+Marks of Mid and Final:
+41 45
+Course:  2
+Marks of Mid and Final:
+43 47
+Course:  3
+Marks of Mid and Final:
+49 44
+Course:  4
+Marks of Mid and Final:
+46 47
+
+Student:  3
+Course:  1
+Marks of Mid and Final:
+10 15
+Course:  2
+Marks of Mid and Final:
+35 20
+Course:  3
+Marks of Mid and Final:
+11 17
+Course:  4
+Marks of Mid and Final:
+29 16
+
+
+
+Ans: ⚡  <a href="https://github.com/AnonXarkA/ALGORITHMS-CSE221-BRACU/tree/main/lab%206"> LAB 6</a> <br> 
+
+
+
