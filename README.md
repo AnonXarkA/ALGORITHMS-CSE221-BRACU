@@ -261,7 +261,7 @@ Study the algorithm below and implement the quickSort method . Additionally you 
 
 
 
-
+< img src="https://prnt.sc/cTkRiHjurDnh" >
 
 
 
