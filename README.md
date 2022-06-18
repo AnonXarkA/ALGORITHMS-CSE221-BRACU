@@ -109,3 +109,176 @@ plt.show()
 
 
 Ans: ⚡  <a href="https://github.com/AnonXarkA/ALGORITHMS-CSE221-BRACU/tree/main/Lab%201"> LAB 1</a> <br> 
+
+# LAB 2 - Sorting lab  📝
+
+<br>
+Task 1: (5 marks)
+Here is code of bubble sort. It’s run time complexity is θ(n2). Change the code in a way so that its time complexity is θ(n) for the best case scenario. Find the best case and change the code a little bit. And explain how you did it in a comment block of your code. 
+
+
+
+def bubbleSort(arr):
+    for i in range(len(arr)-1):
+        for j in range(len(arr)-i-1): 
+            if arr[j] > arr[j+1]:
+                swap( arr[j+1], arr[j] )
+             
+The first line of the input will contain N, which is the size of the array. Next line will contain the N number of elements. Output will contain the sorted elements.
+ P.S: sample input and output may not be the preferred answer choice.
+Input 1:
+5 
+3 2 1 4 5
+Input 2:
+6
+10 20 5 15 25 30
+Output 1:
+1 2 3 4 5
+Output 2:
+5 10 15 20 25 30
+
+
+
+Task 2: (5marks)
+You have a list of elements and their prices. Select your preferred lists from the item based on lowest price. So to complete the task you have a tool called selection sort.
+In selection sort:
+Select the minimum element from the unsorted part of the given array.
+Move the selected element to a sorted part of the array.
+Repeat this process to make the unsorted array sorted.
+
+Here is pseudo code:
+for i ← 0 to n-1
+   m=argminj (A[i], A[i+1], ....... A[n-1]) 
+   swap (A[i], A[m])
+end for
+
+Use the above pseudo code to complete the selection sort.
+First line of the input will contain N items and M preferred choices (where M ≤ N). The next line will contain the price of each element. Output will contain the price of M number of preferred elements. 
+
+Input 1:
+5 3
+5 10 2 1 4
+Input 2:
+7 4
+10 2 3 4 1 100 1
+Output 1:
+1 2 4 
+Output 2:
+1 1 2 3
+
+
+
+
+
+Task 3: (5 marks)
+
+Suppose you are given a task to rank the students. You have gotten the marks and id of the students. Now your task is to rank the students based on their marks using only insertion sort.
+Here is the pseudocode for insertion sort for ascending order. You need to change it to descending order.
+for i ← 0 to n-1
+   temp ← A[i+1]
+    j= i
+   while j>=0
+       if(A[j]>temp)
+       	A[j+1] ←A[j]
+        else
+break 	
+      j= j-1      
+   end for
+A[j+1] ← temp
+end for
+Implement this pseudocode to complete your task. 
+
+First line will contain an integer N. The next line will contain N number of id of the students.The next line will contain the N number of the marks of corresponding students. Output will be ranking the id based on their marks (descending order).
+
+
+Input 1:
+5 
+11 45 34 22 12
+40 50 20 10 10 
+Input 2:
+6
+1 2 3 4 5 6
+50 60 80 20 10 30
+Output 1:
+45 11 34 22 12
+Output 2:
+3 2 1 6 4 5
+
+
+
+Task 4: (5 marks)
+Here is the problem, just simply sorting an array. Now, to sort the array you should use efficient sorting techniques. It will have worst-case time complexity better than the above sorting algorithms. The sorting algorithm pseudocode is given below:
+
+MERGE (A, p, q, r )      
+ n1 ← q − p + 1
+ n2 ← r − q
+Create arrays L[1 . . n1 + 1] and R[1 . . n2 + 1]
+FOR i ← 1 to n1
+ 	DO L[i] ← A[p + i − 1]
+FOR j ← 1 to  n2
+ 	DO R[j] ← A[q + j ]
+L[n1 + 1] ← ∞
+R[n2 + 1] ← ∞
+ i ← 1
+ j ← 1
+FOR k ← p TO r
+DO IF L[i ] ≤ R[ j]
+THEN A[k] ← L[i]
+          i ← i + 1
+ 		ELSE A[k] ← R[j]
+j ← j + 1
+ 
+MERGE-SORT (A, p, r)
+if p < r                                                    // Check for base case
+     q = (p + r)/2            
+    MERGE-SORT  (A, p, q)                        
+    MERGE -SORT (A, q+1, r)                         
+    MERGE (A, p, q, r)                       
+
+
+Take help from pseudocode or use your way to complete the task.
+First line will contain N . The next line will contain N number of elements. The output will contain a sorted N number of elements (ascending order).
+Input 1:
+5 
+5 -1 10 2 8
+
+
+Input 2:
+6
+10 20 3 40 5 6
+Output 1:
+-1 2 5 8 10
+Output 2:
+3 5 6 10 20 40
+
+
+
+Task 5 (5 marks)
+Study the algorithm below and implement the quickSort method . Additionally you will also need to implement the “partition” method. After sorting, print both the unsorted array and sorted array and also the time it takes to complete sorting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b. Implement an algorithm “findK” that uses the “partition” algorithm to find the kth 
+(smallest) element from an array without sorting. E.g. for the array in our example, the 5th element will be “9” 
+
+Input:
+The array: 1 3 4 5 9 10 10
+K=5
+K=7
+K= 2
+Output:
+ 9
+10
+3
+
